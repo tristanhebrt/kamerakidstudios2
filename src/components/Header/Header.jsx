@@ -8,6 +8,15 @@ function Header() {
         visible: { opacity: 1, x: 0 },
     };
 
+    // Define the shake animation for the text
+    const shakeAnimation = {
+        whileHover: {
+            x: ["0%", "-3%", "3%", "-2%", "2%", "0%"], // Shake left and right
+            transition: { duration: 0.3, ease: "easeInOut" },
+            scale: (1.1),
+        }
+    };
+
     return (
         <nav className={styles.headerContainer}>
             <ol>
@@ -17,11 +26,11 @@ function Header() {
                         initial="hidden"
                         animate="visible"
                         variants={listItemVariants}
-                        transition={{ duration: 0.8, delay: index * 0.1 }} // Add delay for staggered effect
+                        transition={{ duration: 0.5, delay: index * 0.3 }} // Add delay for staggered effect
                     >
                         <motion.a 
                             href={`#${item}`} // Correctly link the anchor
-                            whileHover={{ scale: 1.1 }}
+                            whileHover={shakeAnimation.whileHover} // Apply shake animation on hover
                             transition={{ duration: 0.1 }}
                         >
                             {item.charAt(0).toUpperCase() + item.slice(1)} {/* Capitalize first letter */}

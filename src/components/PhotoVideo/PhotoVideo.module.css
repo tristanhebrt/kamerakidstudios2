@@ -1,0 +1,13 @@
+
+.photoVideoContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: row;
+}
+
+.photoVideoContainer img {
+    width: 8rem;
+    margin: 1rem;
+}

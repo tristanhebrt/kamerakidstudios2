@@ -3,6 +3,7 @@ import './Home.css'
 
 import Header from '../components/Header/Header.jsx'
 import AnimatedLogo from '../components/HomeLogo/AnimatedLogo.jsx'
+import PhotoVideo from '../components/PhotoVideo/PhotoVideo.jsx'
 
 function Home() {
 
@@ -10,6 +11,7 @@ function Home() {
     <>
       <Header/>
       <AnimatedLogo/>
+      <PhotoVideo/>
     </>
   )
 }

@@ -7,8 +7,8 @@ const AnimatedLogo = () => {
   return (
     <motion.div
       className={styles.logoContainer}
-      initial={{ x: '-100vw', opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
+      initial={{ y: '-100vw', opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: 'easeOut' }}
     >
       <SVGLogo />

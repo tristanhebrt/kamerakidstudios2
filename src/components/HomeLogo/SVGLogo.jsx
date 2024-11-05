@@ -20,7 +20,7 @@ function SVGLogo() {
         <motion.img 
             src={logo} 
             alt="Kamera Kid Studios Logo" 
-            width={1000} 
+            width={'500rem'} 
             height={'auto'} 
             onClick={handleClick} // Handle the click
             animate={{ rotate: isSpinning ? 720 : 0 }} // Rotate based on state

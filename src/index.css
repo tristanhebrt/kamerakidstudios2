@@ -1,12 +1,21 @@
 
-:root {
+* {
+  --timberwolf: #D8D8D8ff;
+  --gray: #7A7A7Aff;
+  --onyx: #444444ff;
+  --eerie-black: #181918ff;
+  --white: #FFFFFFff;
+
+  box-sizing: border-box; /* Ensures padding and borders are included in width/height */
+  margin: 0;
+  padding: 0;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: --eerie-black;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

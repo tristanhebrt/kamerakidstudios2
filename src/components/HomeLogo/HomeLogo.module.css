@@ -9,3 +9,14 @@
   width: 100vw; /* Make sure the container takes full width */
   height: 100vh; /* Center it vertically if needed */
 }
+
+.smallImagesContainer {
+  position: relative; /* To contain the absolutely positioned small images */
+  width: 100%;
+  height: 100%;
+}
+
+.smallLogo {
+  pointer-events: none; /* Prevent small images from blocking clicks on the main logo */
+  margin: 0; /* Reset margin to avoid layout issues */
+}

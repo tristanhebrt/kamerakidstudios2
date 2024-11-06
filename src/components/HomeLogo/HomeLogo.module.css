@@ -7,5 +7,5 @@
   align-items: center;
   overflow: hidden; /* Prevent overflow if the logo scales */
   width: 100vw; /* Make sure the container takes full width */
-  height: 60vh; /* Center it vertically if needed */
+  height: 80vh; /* Center it vertically if needed */
 }

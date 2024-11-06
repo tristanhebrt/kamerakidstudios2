@@ -1,0 +1,8 @@
+
+* {
+    box-sizing: border-box; /* Ensures padding and borders are included in width/height */
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+

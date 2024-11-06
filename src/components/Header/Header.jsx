@@ -2,11 +2,7 @@ import styles from './Header.module.css';
 import { motion } from 'framer-motion';
 
 function Header() {
-    // Define the animation variants for the list items
-    const listItemVariants = {
-        hidden: { opacity: 0, y: '-100vw' },
-        visible: { opacity: 1, y: 0 },
-    };
+    
 
     // Define the shake animation for the text
     const shakeAnimation = {
@@ -23,10 +19,9 @@ function Header() {
                 {['home', 'gallery', 'contact'].map((item, index) => (
                     <motion.li
                         key={item} // Add unique key
-                        initial="hidden"
-                        animate="visible"
-                        variants={listItemVariants}
-                        transition={{ duration: 0.5, delay: index * 0.3 }} // Add delay for staggered effect
+                        initial={{ y: '-100vw', opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 1, ease: 'easeOut' }}
                     >
                         <motion.a 
                             href={`#${item}`} // Correctly link the anchor

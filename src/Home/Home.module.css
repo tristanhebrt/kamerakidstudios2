@@ -6,6 +6,8 @@
   padding: 0;
 }
 
-body {
+.homeContainer {
+  color: var(--onyx);
   background-color: var(--timberwolf);
+  min-height: 100vh;
 }

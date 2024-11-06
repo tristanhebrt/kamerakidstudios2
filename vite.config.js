@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 
-  base: "/kamerakidstudios2/",
+  base: "/kamerakidstudios2/kamerakidstudios/",
 
   build: {
     sourcemap: false, // Disable source maps

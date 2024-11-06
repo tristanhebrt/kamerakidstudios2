@@ -3,7 +3,6 @@
 .photoGalleryContainer h1 {
     font-size: 4rem;
     font-weight: 400;
-    padding: 2rem;
     letter-spacing: 1rem;
     text-align: center;
 }
@@ -11,14 +10,16 @@
 .photoGalleryContainer h2 {
     font-size: 4rem;
     font-weight: 700;
-    padding: 2rem;
-    margin-top: 5rem;
     letter-spacing: 1.5rem;
     text-align: center;
+
+    padding: 1rem;
 }
 
 .photoContainer {
-    padding: 2rem; /* You can keep this padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Image stack styles */
@@ -41,9 +42,11 @@
 }
 
 .image_card img {
-    max-width: 100%; /* Set max width to 100% to fill container */
-    max-height: 100%; /* Set max height to 100% to fill container */
+    max-width: 90%; /* Set max width to 100% to fill container */
+    max-height: 90%; /* Set max height to 100% to fill container */
     object-fit: contain; /* Ensure the entire image is visible, maintaining aspect ratio */
+    box-shadow: -2px 2px 5px var(--onyx), 2px 2px 5px var(--onyx);
+
     user-select: none; /* Prevent text selection */
     -webkit-user-drag: none; /* Prevent dragging on webkit browsers */
 }

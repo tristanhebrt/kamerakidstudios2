@@ -11,18 +11,15 @@ const imageSources = {
 const PhotoGallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [isModalVisible, setIsModalVisible] = useState(false);
-    const [backgroundImage, setBackgroundImage] = useState('');
 
     const handleImageClick = (src) => {
         setSelectedImage(src);
         setIsModalVisible(true);
-        setBackgroundImage(src); // Set the background image
     };
 
     const handleCloseModal = () => {
         setIsModalVisible(false);
         setSelectedImage(null);
-        setBackgroundImage(''); // Reset background image
     };
 
     useEffect(() => {
@@ -41,10 +38,7 @@ const PhotoGallery = () => {
     }, [isModalVisible]);
 
     return (
-        <div 
-            className={styles.photoGalleryContainer} 
-            style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-        >
+        <div className={styles.photoGalleryContainer}>
             {Object.entries(imageSources).map(([category, images]) => (
                 <div key={category}>
                     <h2>{category.charAt(0).toUpperCase() + category.slice(1)}</h2>

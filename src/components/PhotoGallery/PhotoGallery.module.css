@@ -25,8 +25,8 @@
 /* Image stack styles */
 .image_stack {
     position: relative; /* Ensure images stack correctly */
-    width: 300px; /* Set a fixed width for the stack */
-    height: 400px; /* Set a fixed height for the stack */
+    width: 50vw; /* Set a fixed width for the stack */
+    height: 100vh; /* Set a fixed height for the stack */
     overflow: hidden; /* Hide overflowing images */
     background-color: var(--timberwolf); /* Set the background color to white */
 }
@@ -86,4 +86,20 @@
 .noScroll {
     overflow: hidden;
     height: 100%; /* Optional: Ensure full height is covered */
+}
+
+@media screen and (max-width: 600px) {
+    .image_stack {
+        width: 90vw; /* Set a fixed width for the stack */
+        height: 50vh; /* Set a fixed height for the stack */
+    }
+
+    .photoGalleryContainer h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: 1rem;
+        text-align: center;
+    
+        padding: 5rem 0 1rem 0;
+    }
 }

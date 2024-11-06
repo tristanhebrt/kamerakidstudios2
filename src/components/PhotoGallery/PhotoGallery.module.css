@@ -20,9 +20,9 @@
     text-align: left;
 }
 
-.photoGalleryContainer img {
-    min-width: 150px;
-    max-width: 500px;
+.photoContainer img {
+    max-width: 200px;
+    max-height: 200px;
 
     border: 2px solid var(--gray); /* Dark outer border */
     border-radius: 2px; /* Slightly rounded corners */

@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import ImageModal from './ImageModal';
+import ImageStack from './ImageStack'; // Import your ImageStack component
 import styles from './PhotoGallery.module.css';
 
+// Import images directly
+import photographyImages from '/assets/photos/photography/index.js';
+import coverArtImages from '/assets/photos/coverArt/index.js';
+
 const imageSources = {
-    // showcase: Array.from({ length: 8 }, (_, index) => `../assets/photos/showcase/${index + 1}.webp`),
-    photography: Array.from({ length: 30 }, (_, index) => `../assets/photos/photography/${index + 1}.webp`),
-    coverArt: Array.from({ length: 8 }, (_, index) => `../assets/photos/coverArt/${index + 1}.webp`),
+    photography: photographyImages, // Assuming you have an array of image paths here
+    coverArt: coverArtImages, // Same here
 };
 
 const PhotoGallery = () => {
@@ -24,14 +28,10 @@ const PhotoGallery = () => {
 
     useEffect(() => {
         if (isModalVisible) {
-            // Disable scrolling
             document.body.classList.add(styles.noScroll);
         } else {
-            // Enable scrolling
             document.body.classList.remove(styles.noScroll);
         }
-
-        // Cleanup function to ensure scrolling is enabled when the component unmounts
         return () => {
             document.body.classList.remove(styles.noScroll);
         };
@@ -43,20 +43,10 @@ const PhotoGallery = () => {
                 <div key={category}>
                     <h2>{category.charAt(0).toUpperCase() + category.slice(1)}</h2>
                     <div className={styles.photoContainer}>
-                        {images.map((src, index) => (
-                            <img 
-                                src={src} 
-                                alt={`${category.charAt(0).toUpperCase() + category.slice(1)} Image ${index + 1}`} 
-                                key={index} 
-                                loading="lazy" 
-                                onError={(e) => { e.target.src = '../assets/placeholder.webp'; }} 
-                                onClick={() => handleImageClick(src)} 
-                            />
-                        ))}
+                        <ImageStack images={images} onImageClick={handleImageClick} /> {/* Use ImageStack here */}
                     </div>
                 </div>
             ))}
-
             <ImageModal 
                 selectedImage={selectedImage} 
                 isModalVisible={isModalVisible} 

@@ -1,12 +1,4 @@
 
-.photoContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 2rem;
-}
 
 .photoGalleryContainer h1 {
     font-size: 4rem;
@@ -25,20 +17,35 @@
     text-align: center;
 }
 
-.photoContainer img {
-    max-width: 200px;
-    max-height: 200px;
-
-    cursor: pointer;
-    border-radius: 2px; /* Slightly rounded corners */
-    position: relative; /* Positioning for pseudo-elements */
-    transition: transform 0.2s; /* Smooth transitions */
-    overflow: hidden; /* Prevents overflow of pseudo-elements */
+.photoContainer {
+    padding: 2rem; /* You can keep this padding */
 }
 
-.photoContainer img:hover {
-    transform: scale(1.05);
-    box-shadow: 5px 5px 5px var(--eerie-black);
+/* Image stack styles */
+.image_stack {
+    position: relative; /* Ensure images stack correctly */
+    width: 300px; /* Set a fixed width for the stack */
+    height: 400px; /* Set a fixed height for the stack */
+    overflow: hidden; /* Hide overflowing images */
+    background-color: var(--timberwolf); /* Set the background color to white */
+}
+
+.image_card {
+    position: absolute; /* Position images absolutely within the stack */
+    width: 100%; /* Make images take the full width of the container */
+    height: 100%; /* Make images take the full height of the container */
+    display: flex; /* Center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: var(--timberwolf); /* Set the background color to white */
+}
+
+.image_card img {
+    max-width: 100%; /* Set max width to 100% to fill container */
+    max-height: 100%; /* Set max height to 100% to fill container */
+    object-fit: contain; /* Ensure the entire image is visible, maintaining aspect ratio */
+    user-select: none; /* Prevent text selection */
+    -webkit-user-drag: none; /* Prevent dragging on webkit browsers */
 }
 
 /* Modal styles */

@@ -5,30 +5,63 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    padding: 2rem;
 }
 
 .photoGalleryContainer h1 {
-    font-size: 2rem;
+    font-size: 4rem;
+    font-weight: 400;
     padding: 2rem;
     letter-spacing: 1rem;
     text-align: center;
 }
   
 .photoGalleryContainer h2 {
-    font-size: 1.5rem;
+    font-size: 4rem;
+    font-weight: 700;
     padding: 2rem;
-    text-align: left;
+    margin-top: 5rem;
+    letter-spacing: 1.5rem;
+    text-align: center;
 }
 
 .photoContainer img {
     max-width: 200px;
     max-height: 200px;
 
-    border: 2px solid var(--gray); /* Dark outer border */
+    cursor: pointer;
     border-radius: 2px; /* Slightly rounded corners */
-    padding: 3px; /* Space between the image and the border */
-    background-color: var(--onyx); /* Dark background for the padding area */
     position: relative; /* Positioning for pseudo-elements */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    transition: transform 0.2s; /* Smooth transitions */
     overflow: hidden; /* Prevents overflow of pseudo-elements */
+}
+
+.photoContainer img:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 5px var(--eerie-black);
+}
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8); /* semi-transparent background */
+    z-index: 1000; /* make sure it's above other content */
+}
+
+.modal img {
+    max-width: 50vw;
+    max-height: 60vh;
+    border-radius: 8px; /* optional for rounded corners */
+}
+
+.noScroll {
+    overflow: hidden;
+    height: 100%; /* Optional: Ensure full height is covered */
 }

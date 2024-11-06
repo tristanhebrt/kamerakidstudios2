@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 import photoCamera from '/src/assets/photo-camera.svg';
 import videoCamera from '/src/assets/video-camera.svg';
+import mail from '/src/assets/mail.svg';
 
 function PhotoVodeo() {
     return ( 
@@ -18,6 +19,9 @@ function PhotoVodeo() {
             </a>
             <a href="#videos" className={styles.videoLink}>
                 <img src={videoCamera} alt="Video Camera" />
+            </a>
+            <a href="#contact" className={styles.mailLink}>
+                <img src={mail} alt="Mail" />
             </a>
         </div>        
         </motion.div>

@@ -3,13 +3,9 @@ import ImageModal from './ImageModal';
 import ImageStack from './ImageStack'; // Import your ImageStack component
 import styles from './PhotoGallery.module.css';
 
-// Import images directly
-import photographyImages from '/assets/photos/photography/index.js';
-import coverArtImages from '/assets/photos/coverArt/index.js';
-
 const imageSources = {
-    photography: photographyImages, // Assuming you have an array of image paths here
-    coverArt: coverArtImages, // Same here
+    photography: Array.from({ length: 30 }, (_, index) => `../assets/photos/photography/${index + 1}.webp`),
+    coverArt: Array.from({ length: 8 }, (_, index) => `../assets/photos/coverArt/${index + 1}.webp`),
 };
 
 const PhotoGallery = () => {
